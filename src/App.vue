@@ -1,10 +1,12 @@
 <template>
   <div id="app">
     <header>
-      <h1>10 Questions de culture générale</h1>
+      <h1>
+        <span class="number">10</span> questions de culture générale
+      </h1>
     </header>
     <div class="container">
-      <div class="container__part1">
+      <div>
         <Questions
           v-for="(item, index) in items"
           :key="index"
@@ -12,11 +14,8 @@
           v-on:addSolution="onAddSolution"
         />
       </div>
-      <div
-        class="container__part2"
-        :class="{beforeScroll : scrollPosition < 50, afterScroll : scrollPosition > 50}"
-      >
-        <Reponses :post="solutions" class="index" />
+      <div class="container__app-reponses">
+        <Reponses :post="solutions" class="app-reponses" />
       </div>
     </div>
     <div class="progress" :style="{ width: progress + '%'}"></div>
@@ -91,8 +90,7 @@ export default {
       solutions: [],
       progress: 0,
       stageProgressBar: 0,
-      include: false,
-      scrollPosition: null
+      include: false
     };
   },
   created() {
@@ -104,9 +102,6 @@ export default {
         solution: element.solution
       });
     });
-  },
-  mounted() {
-    window.addEventListener("scroll", this.updateScroll);
   },
   methods: {
     onAddSolution(value) {
@@ -124,13 +119,7 @@ export default {
         this.progress += this.stageProgressBar;
       }
       this.include = false;
-    },
-    updateScroll() {
-      this.scrollPosition = window.scrollY;
     }
-  },
-  destroy() {
-    window.removeEventListener("scroll", this.updateScroll);
   }
 };
 </script>
@@ -149,25 +138,24 @@ header {
   text-transform: uppercase;
   font-weight: 700;
 }
+h1 {
+  letter-spacing: 0.05rem;
+}
+.number {
+  color: rgb(20, 137, 221);
+}
 .container {
   display: flex;
   height: 100%;
   width: 80vw;
   margin: auto;
 
-  &__part2 {
+  &__app-reponses {
     position: fixed;
     right: 7.5vw;
-    top: 8vh;
+    top: 50%;
+    margin-top: -350px;
   }
-}
-.beforeScroll {
-  margin-top: 5vh;
-  transition: margin-top 0.2s ease-out;
-}
-.afterScroll {
-  margin-top: 1vh;
-  transition: margin-top 1s ease-out;
 }
 .progress {
   position: fixed;
@@ -176,5 +164,21 @@ header {
   top: 0;
   background-color: orange;
   transition: width 0.5s ease-out;
+}
+
+@media screen and (max-width: 1800px) {
+  .container__app-reponses {
+    display: none;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 90vw;
+    text-align: center;
+
+    div {
+      margin: auto;
+    }
+  }
 }
 </style>

@@ -70,6 +70,7 @@ ul {
   display: inline-block;
   padding: 0.2rem 0 0.2rem 0;
   width: 25vw;
+  min-width: 375px;
   text-align: center;
   border-radius: 2rem;
   cursor: pointer;
@@ -88,6 +89,11 @@ ul {
   &__active {
     box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2),
       0 5px 8px 0 rgba(0, 0, 0, 0.14), 0 1px 14px 0 rgba(0, 0, 0, 0.12);
+  }
+}
+@media screen and (max-width: 500px) {
+  .card {
+    min-width: 250px;
   }
 }
 </style>

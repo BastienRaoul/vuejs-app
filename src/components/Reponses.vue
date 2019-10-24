@@ -83,9 +83,11 @@ export default {
   margin: 0;
 }
 button {
-  float: right;
-  transform: translate(22px, -30px);
+  position: absolute;
+  z-index: 15;
   font-size: 1rem;
+  right: 10px;
+  bottom: 10px;
   background-color: #4caf50;
   border: none;
   color: white;
@@ -119,7 +121,7 @@ ul li::before {
 .carre {
   width: 100px;
   height: 100px;
-  background-color: rgb(88, 88, 218);
+  background: rgba(20, 137, 221, 0.7);
   position: absolute;
   z-index: 1;
   &__1 {
