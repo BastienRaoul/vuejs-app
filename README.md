@@ -1,24 +1,20 @@
-# projet-a
+# Q & A - Vuejs
 
-## Project setup
-```
-npm install
-```
+Utilisation des fonctionnalités de VueJS
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Installation :
 
-### Compiles and minifies for production
-```
-npm run build
-```
+1. Clone this repository : `git clone https://github.com/BastienRaoul/projet_vuejs.git`  
+2. Then install its dependencies : `npm install`
 
-### Lints and fixes files
-```
-npm run lint
-```
+## Requirements :
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- [Git](https://git-scm.com/) if you want to clone this repository.
+- [NodeJS](https://nodejs.org/en/) to run the application.
+- [Npm](https://www.npmjs.com/) to install dependencies (see the full list below at "Dependencies").
+
+## Getting started :
+
+1. Install this application (See Installation).
+2. Start the server with : `npm run serve`
+3. Connect at : `http://localhost:8080`
