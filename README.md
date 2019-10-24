@@ -1,7 +1,7 @@
 # Q & A - Vuejs
 
-Utilisation des fonctionnalités de VueJS.
-Démonstration du projet : https://vuejs-br.netlify.com/
+Utilisation des fonctionnalités de VueJS.  
+Démonstration du projet [Q&A](https://vuejs-br.netlify.com/).
 
 ## Installation :
 
