@@ -154,7 +154,7 @@ h1 {
     position: fixed;
     right: 7.5vw;
     top: 50%;
-    margin-top: -350px;
+    transform: translate(0, -45%);
   }
 }
 .progress {
