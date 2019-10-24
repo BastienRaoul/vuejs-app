@@ -11,7 +11,7 @@ Utilisation des fonctionnalités de VueJS
 
 - [Git](https://git-scm.com/) if you want to clone this repository.
 - [NodeJS](https://nodejs.org/en/) to run the application.
-- [Npm](https://www.npmjs.com/) to install dependencies (see the full list below at "Dependencies").
+- [Npm](https://www.npmjs.com/) to install dependencies
 
 ## Getting started :
 
